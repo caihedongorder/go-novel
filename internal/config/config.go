@@ -7,6 +7,7 @@ import (
 
 	"go-novel/internal/embed"
 
+	"github.com/go-viper/encoding/ini"
 	"github.com/spf13/viper"
 )
 
@@ -60,6 +61,10 @@ var (
 
 func InitConfig() *Config {
 	once.Do(func() {
+		codecRegistry := viper.NewCodecRegistry()
+		codecRegistry.RegisterCodec("ini", ini.Codec{})
+		viper.SetOptions(viper.WithCodecRegistry(codecRegistry))
+
 		// 设置配置文件
 		viper.SetConfigName("config") // 配置文件名为 config
 		viper.SetConfigType("ini")    // 类型为 ini

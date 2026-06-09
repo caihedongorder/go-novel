@@ -8,6 +8,7 @@ require (
 	github.com/bmaupin/go-epub v1.1.0
 	github.com/dop251/goja v0.0.0-20251121114222-56b1242a5f86
 	github.com/gin-gonic/gin v1.11.0
+	github.com/go-viper/encoding/ini v0.1.1
 	github.com/spf13/viper v1.21.0
 )
 
@@ -57,4 +58,5 @@ require (
 	golang.org/x/sys v0.38.0 // indirect
 	golang.org/x/text v0.31.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
+	gopkg.in/ini.v1 v1.67.0 // indirect
 )
